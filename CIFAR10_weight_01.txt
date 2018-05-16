@@ -1,0 +1,264 @@
+(env_3.5_pytorch) bash-4.2$ python pytorch-CIFAR10-100.py
+Using PyTorch version: 0.4.0 CUDA: False
+Files already downloaded and verified
+X_train: torch.Size([32, 3, 32, 32]) type: torch.FloatTensor
+y_train: torch.Size([32]) type: torch.LongTensor
+Net(
+  (conv1): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=Fa                                     lse)
+  (conv2): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
+  (fc1): Linear(in_features=400, out_features=100, bias=True)
+  (fc3): Linear(in_features=100, out_features=10, bias=True)
+)
+pytorch-CIFAR10-100.py:68: UserWarning: Implicit dimension choice for log_softma                                     x has been deprecated. Change the call to include dim=X as an argument.
+  x = F.log_softmax(self.fc3(x))
+pytorch-CIFAR10-100.py:93: UserWarning: invalid index of a 0-dim tensor. This wi                                     ll be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a                                      Python number
+  100. * batch_idx / len(train_loader), loss.data[0]))
+Train Epoch: 1 [0/50000 (0%)]   Loss: 2.302777
+Train Epoch: 1 [3200/50000 (6%)]        Loss: 2.308302
+Train Epoch: 1 [6400/50000 (13%)]       Loss: 2.306236
+Train Epoch: 1 [9600/50000 (19%)]       Loss: 2.305434
+Train Epoch: 1 [12800/50000 (26%)]      Loss: 2.300815
+Train Epoch: 1 [16000/50000 (32%)]      Loss: 2.299606
+Train Epoch: 1 [19200/50000 (38%)]      Loss: 2.298396
+Train Epoch: 1 [22400/50000 (45%)]      Loss: 2.291988
+Train Epoch: 1 [25600/50000 (51%)]      Loss: 2.279757
+Train Epoch: 1 [28800/50000 (58%)]      Loss: 2.287864
+Train Epoch: 1 [32000/50000 (64%)]      Loss: 2.234822
+Train Epoch: 1 [35200/50000 (70%)]      Loss: 2.232954
+Train Epoch: 1 [38400/50000 (77%)]      Loss: 2.164208
+Train Epoch: 1 [41600/50000 (83%)]      Loss: 2.199681
+Train Epoch: 1 [44800/50000 (90%)]      Loss: 2.155376
+Train Epoch: 1 [48000/50000 (96%)]      Loss: 2.197801
+pytorch-CIFAR10-100.py:101: UserWarning: volatile was removed and now has no eff                                     ect. Use `with torch.no_grad():` instead.
+  data, target = Variable(data, volatile=True), Variable(target)
+pytorch-CIFAR10-100.py:103: UserWarning: invalid index of a 0-dim tensor. This w                                     ill be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a                                      Python number
+  val_loss += F.nll_loss(output, target).data[0]
+
+Validation set: Average loss: 2.1973, Accuracy: 1853/10000 (18%)
+
+Train Epoch: 2 [0/50000 (0%)]   Loss: 2.209365
+Train Epoch: 2 [3200/50000 (6%)]        Loss: 2.206056
+^CTraceback (most recent call last):
+  File "pytorch-CIFAR10-100.py", line 121, in <module>
+    train(epoch)
+  File "pytorch-CIFAR10-100.py", line 86, in train
+    output = model(data)
+  File "/scratch/cs434spring2018/env_3.5_pytorch/lib/python3.5/site-packages/tor                                     ch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "pytorch-CIFAR10-100.py", line 63, in forward
+    x = self.pool(F.relu(self.conv1(x)))
+  File "/scratch/cs434spring2018/env_3.5_pytorch/lib/python3.5/site-packages/tor                                     ch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/cs434spring2018/env_3.5_pytorch/lib/python3.5/site-packages/tor                                     ch/nn/modules/conv.py", line 301, in forward
+    self.padding, self.dilation, self.groups)
+KeyboardInterrupt
+(env_3.5_pytorch) bash-4.2$ python pytorch-CIFAR10-100.py
+Using PyTorch version: 0.4.0 CUDA: False
+Files already downloaded and verified
+X_train: torch.Size([32, 3, 32, 32]) type: torch.FloatTensor
+y_train: torch.Size([32]) type: torch.LongTensor
+Net(
+  (conv1): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=Fa                                     lse)
+  (conv2): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
+  (fc1): Linear(in_features=400, out_features=100, bias=True)
+  (fc3): Linear(in_features=100, out_features=10, bias=True)
+)
+pytorch-CIFAR10-100.py:68: UserWarning: Implicit dimension choice for log_softma                                     x has been deprecated. Change the call to include dim=X as an argument.
+  x = F.log_softmax(self.fc3(x))
+pytorch-CIFAR10-100.py:93: UserWarning: invalid index of a 0-dim tensor. This wi                                     ll be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a                                      Python number
+  100. * batch_idx / len(train_loader), loss.data[0]))
+Train Epoch: 1 [0/50000 (0%)]   Loss: 2.310876
+Train Epoch: 1 [3200/50000 (6%)]        Loss: 2.327160
+Train Epoch: 1 [6400/50000 (13%)]       Loss: 2.283301
+Train Epoch: 1 [9600/50000 (19%)]       Loss: 2.281276
+Train Epoch: 1 [12800/50000 (26%)]      Loss: 2.226344
+Train Epoch: 1 [16000/50000 (32%)]      Loss: 2.153225
+Train Epoch: 1 [19200/50000 (38%)]      Loss: 2.103349
+Train Epoch: 1 [22400/50000 (45%)]      Loss: 2.024232
+Train Epoch: 1 [25600/50000 (51%)]      Loss: 2.087303
+Train Epoch: 1 [28800/50000 (58%)]      Loss: 1.897557
+Train Epoch: 1 [32000/50000 (64%)]      Loss: 1.851795
+Train Epoch: 1 [35200/50000 (70%)]      Loss: 1.861479
+Train Epoch: 1 [38400/50000 (77%)]      Loss: 1.930876
+Train Epoch: 1 [41600/50000 (83%)]      Loss: 1.914206
+Train Epoch: 1 [44800/50000 (90%)]      Loss: 1.904491
+Train Epoch: 1 [48000/50000 (96%)]      Loss: 1.977246
+pytorch-CIFAR10-100.py:101: UserWarning: volatile was removed and now has no eff                                     ect. Use `with torch.no_grad():` instead.
+  data, target = Variable(data, volatile=True), Variable(target)
+pytorch-CIFAR10-100.py:103: UserWarning: invalid index of a 0-dim tensor. This w                                     ill be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a                                      Python number
+  val_loss += F.nll_loss(output, target).data[0]
+
+Validation set: Average loss: 1.6966, Accuracy: 3801/10000 (38%)
+
+Train Epoch: 2 [0/50000 (0%)]   Loss: 1.525585
+Train Epoch: 2 [3200/50000 (6%)]        Loss: 1.566839
+Train Epoch: 2 [6400/50000 (13%)]       Loss: 1.962220
+Train Epoch: 2 [9600/50000 (19%)]       Loss: 1.700384
+Train Epoch: 2 [12800/50000 (26%)]      Loss: 1.365253
+Train Epoch: 2 [16000/50000 (32%)]      Loss: 1.520035
+Train Epoch: 2 [19200/50000 (38%)]      Loss: 1.654451
+Train Epoch: 2 [22400/50000 (45%)]      Loss: 1.579278
+Train Epoch: 2 [25600/50000 (51%)]      Loss: 1.558088
+Train Epoch: 2 [28800/50000 (58%)]      Loss: 1.681285
+Train Epoch: 2 [32000/50000 (64%)]      Loss: 1.632163
+Train Epoch: 2 [35200/50000 (70%)]      Loss: 1.669356
+Train Epoch: 2 [38400/50000 (77%)]      Loss: 1.796974
+Train Epoch: 2 [41600/50000 (83%)]      Loss: 1.523134
+Train Epoch: 2 [44800/50000 (90%)]      Loss: 1.470247
+Train Epoch: 2 [48000/50000 (96%)]      Loss: 1.508197
+
+Validation set: Average loss: 1.4948, Accuracy: 4597/10000 (45%)
+
+Train Epoch: 3 [0/50000 (0%)]   Loss: 1.352130
+Train Epoch: 3 [3200/50000 (6%)]        Loss: 1.448180
+Train Epoch: 3 [6400/50000 (13%)]       Loss: 1.597738
+Train Epoch: 3 [9600/50000 (19%)]       Loss: 1.363969
+Train Epoch: 3 [12800/50000 (26%)]      Loss: 1.278730
+Train Epoch: 3 [16000/50000 (32%)]      Loss: 1.314854
+Train Epoch: 3 [19200/50000 (38%)]      Loss: 1.306494
+Train Epoch: 3 [22400/50000 (45%)]      Loss: 1.735437
+Train Epoch: 3 [25600/50000 (51%)]      Loss: 1.477075
+Train Epoch: 3 [28800/50000 (58%)]      Loss: 1.564948
+Train Epoch: 3 [32000/50000 (64%)]      Loss: 1.083031
+Train Epoch: 3 [35200/50000 (70%)]      Loss: 1.016881
+Train Epoch: 3 [38400/50000 (77%)]      Loss: 1.469554
+Train Epoch: 3 [41600/50000 (83%)]      Loss: 1.476651
+Train Epoch: 3 [44800/50000 (90%)]      Loss: 1.464532
+Train Epoch: 3 [48000/50000 (96%)]      Loss: 1.539011
+
+Validation set: Average loss: 1.4186, Accuracy: 4866/10000 (48%)
+
+Train Epoch: 4 [0/50000 (0%)]   Loss: 1.255449
+Train Epoch: 4 [3200/50000 (6%)]        Loss: 1.617108
+Train Epoch: 4 [6400/50000 (13%)]       Loss: 1.304579
+Train Epoch: 4 [9600/50000 (19%)]       Loss: 1.327562
+Train Epoch: 4 [12800/50000 (26%)]      Loss: 1.433215
+Train Epoch: 4 [16000/50000 (32%)]      Loss: 1.357253
+Train Epoch: 4 [19200/50000 (38%)]      Loss: 1.322964
+Train Epoch: 4 [22400/50000 (45%)]      Loss: 1.277611
+Train Epoch: 4 [25600/50000 (51%)]      Loss: 1.406639
+Train Epoch: 4 [28800/50000 (58%)]      Loss: 1.593365
+Train Epoch: 4 [32000/50000 (64%)]      Loss: 1.330693
+Train Epoch: 4 [35200/50000 (70%)]      Loss: 1.218958
+Train Epoch: 4 [38400/50000 (77%)]      Loss: 1.481807
+Train Epoch: 4 [41600/50000 (83%)]      Loss: 1.199745
+Train Epoch: 4 [44800/50000 (90%)]      Loss: 1.309014
+Train Epoch: 4 [48000/50000 (96%)]      Loss: 0.939907
+
+Validation set: Average loss: 1.3806, Accuracy: 5016/10000 (50%)
+
+Train Epoch: 5 [0/50000 (0%)]   Loss: 1.505103
+Train Epoch: 5 [3200/50000 (6%)]        Loss: 1.570159
+Train Epoch: 5 [6400/50000 (13%)]       Loss: 1.430761
+Train Epoch: 5 [9600/50000 (19%)]       Loss: 1.319434
+Train Epoch: 5 [12800/50000 (26%)]      Loss: 1.271882
+Train Epoch: 5 [16000/50000 (32%)]      Loss: 1.631194
+Train Epoch: 5 [19200/50000 (38%)]      Loss: 1.344212
+Train Epoch: 5 [22400/50000 (45%)]      Loss: 1.542436
+Train Epoch: 5 [25600/50000 (51%)]      Loss: 1.294951
+Train Epoch: 5 [28800/50000 (58%)]      Loss: 1.244802
+Train Epoch: 5 [32000/50000 (64%)]      Loss: 1.361543
+Train Epoch: 5 [35200/50000 (70%)]      Loss: 1.126538
+Train Epoch: 5 [38400/50000 (77%)]      Loss: 1.559212
+Train Epoch: 5 [41600/50000 (83%)]      Loss: 1.525123
+Train Epoch: 5 [44800/50000 (90%)]      Loss: 1.491883
+Train Epoch: 5 [48000/50000 (96%)]      Loss: 1.381748
+
+Validation set: Average loss: 1.3870, Accuracy: 5097/10000 (50%)
+
+Train Epoch: 6 [0/50000 (0%)]   Loss: 1.187190
+Train Epoch: 6 [3200/50000 (6%)]        Loss: 1.081014
+Train Epoch: 6 [6400/50000 (13%)]       Loss: 1.521104
+Train Epoch: 6 [9600/50000 (19%)]       Loss: 1.538226
+Train Epoch: 6 [12800/50000 (26%)]      Loss: 1.199031
+Train Epoch: 6 [16000/50000 (32%)]      Loss: 1.439920
+Train Epoch: 6 [19200/50000 (38%)]      Loss: 1.351507
+Train Epoch: 6 [22400/50000 (45%)]      Loss: 1.221991
+Train Epoch: 6 [25600/50000 (51%)]      Loss: 1.295226
+Train Epoch: 6 [28800/50000 (58%)]      Loss: 0.972610
+Train Epoch: 6 [32000/50000 (64%)]      Loss: 1.724049
+Train Epoch: 6 [35200/50000 (70%)]      Loss: 1.152757
+Train Epoch: 6 [38400/50000 (77%)]      Loss: 1.148132
+Train Epoch: 6 [41600/50000 (83%)]      Loss: 1.252223
+Train Epoch: 6 [44800/50000 (90%)]      Loss: 1.499289
+Train Epoch: 6 [48000/50000 (96%)]      Loss: 1.364096
+
+Validation set: Average loss: 1.3350, Accuracy: 5179/10000 (51%)
+
+Train Epoch: 7 [0/50000 (0%)]   Loss: 1.168902
+Train Epoch: 7 [3200/50000 (6%)]        Loss: 1.288331
+Train Epoch: 7 [6400/50000 (13%)]       Loss: 1.433361
+Train Epoch: 7 [9600/50000 (19%)]       Loss: 1.467116
+Train Epoch: 7 [12800/50000 (26%)]      Loss: 1.435018
+Train Epoch: 7 [16000/50000 (32%)]      Loss: 1.691643
+Train Epoch: 7 [19200/50000 (38%)]      Loss: 1.398045
+Train Epoch: 7 [22400/50000 (45%)]      Loss: 1.060359
+Train Epoch: 7 [25600/50000 (51%)]      Loss: 1.476631
+Train Epoch: 7 [28800/50000 (58%)]      Loss: 1.003150
+Train Epoch: 7 [32000/50000 (64%)]      Loss: 1.011864
+Train Epoch: 7 [35200/50000 (70%)]      Loss: 1.043770
+Train Epoch: 7 [38400/50000 (77%)]      Loss: 1.089471
+Train Epoch: 7 [41600/50000 (83%)]      Loss: 0.982050
+Train Epoch: 7 [44800/50000 (90%)]      Loss: 1.118801
+Train Epoch: 7 [48000/50000 (96%)]      Loss: 1.415726
+
+Validation set: Average loss: 1.2968, Accuracy: 5392/10000 (53%)
+
+Train Epoch: 8 [0/50000 (0%)]   Loss: 1.457393
+Train Epoch: 8 [3200/50000 (6%)]        Loss: 1.258266
+Train Epoch: 8 [6400/50000 (13%)]       Loss: 0.988484
+Train Epoch: 8 [9600/50000 (19%)]       Loss: 1.298970
+Train Epoch: 8 [12800/50000 (26%)]      Loss: 1.330074
+Train Epoch: 8 [16000/50000 (32%)]      Loss: 1.053432
+Train Epoch: 8 [19200/50000 (38%)]      Loss: 1.530388
+Train Epoch: 8 [22400/50000 (45%)]      Loss: 1.299115
+Train Epoch: 8 [25600/50000 (51%)]      Loss: 1.160814
+Train Epoch: 8 [28800/50000 (58%)]      Loss: 1.260309
+Train Epoch: 8 [32000/50000 (64%)]      Loss: 1.415355
+Train Epoch: 8 [35200/50000 (70%)]      Loss: 1.300743
+Train Epoch: 8 [38400/50000 (77%)]      Loss: 1.006868
+Train Epoch: 8 [41600/50000 (83%)]      Loss: 1.111714
+Train Epoch: 8 [44800/50000 (90%)]      Loss: 1.368008
+Train Epoch: 8 [48000/50000 (96%)]      Loss: 0.985309
+
+Validation set: Average loss: 1.2837, Accuracy: 5404/10000 (54%)
+
+Train Epoch: 9 [0/50000 (0%)]   Loss: 1.182637
+Train Epoch: 9 [3200/50000 (6%)]        Loss: 1.173930
+Train Epoch: 9 [6400/50000 (13%)]       Loss: 0.755072
+Train Epoch: 9 [9600/50000 (19%)]       Loss: 1.033170
+Train Epoch: 9 [12800/50000 (26%)]      Loss: 1.146272
+Train Epoch: 9 [16000/50000 (32%)]      Loss: 0.986453
+Train Epoch: 9 [19200/50000 (38%)]      Loss: 1.260397
+Train Epoch: 9 [22400/50000 (45%)]      Loss: 1.286122
+Train Epoch: 9 [25600/50000 (51%)]      Loss: 1.285468
+Train Epoch: 9 [28800/50000 (58%)]      Loss: 1.061940
+Train Epoch: 9 [32000/50000 (64%)]      Loss: 1.143561
+Train Epoch: 9 [35200/50000 (70%)]      Loss: 1.038114
+Train Epoch: 9 [38400/50000 (77%)]      Loss: 1.445038
+Train Epoch: 9 [41600/50000 (83%)]      Loss: 0.943167
+Train Epoch: 9 [44800/50000 (90%)]      Loss: 1.334896
+Train Epoch: 9 [48000/50000 (96%)]      Loss: 1.372074
+
+Validation set: Average loss: 1.3308, Accuracy: 5273/10000 (52%)
+
+Train Epoch: 10 [0/50000 (0%)]  Loss: 0.855360
+Train Epoch: 10 [3200/50000 (6%)]       Loss: 1.297301
+Train Epoch: 10 [6400/50000 (13%)]      Loss: 1.340996
+Train Epoch: 10 [9600/50000 (19%)]      Loss: 1.136764
+Train Epoch: 10 [12800/50000 (26%)]     Loss: 1.429709
+Train Epoch: 10 [16000/50000 (32%)]     Loss: 1.412563
+Train Epoch: 10 [19200/50000 (38%)]     Loss: 1.236200
+Train Epoch: 10 [22400/50000 (45%)]     Loss: 0.897715
+Train Epoch: 10 [25600/50000 (51%)]     Loss: 1.271988
+Train Epoch: 10 [28800/50000 (58%)]     Loss: 1.553429
+Train Epoch: 10 [32000/50000 (64%)]     Loss: 1.169061
+Train Epoch: 10 [35200/50000 (70%)]     Loss: 1.317260
+Train Epoch: 10 [38400/50000 (77%)]     Loss: 1.140627
+Train Epoch: 10 [41600/50000 (83%)]     Loss: 1.256987
+Train Epoch: 10 [44800/50000 (90%)]     Loss: 1.114952
+Train Epoch: 10 [48000/50000 (96%)]     Loss: 1.236560
+
+Validation set: Average loss: 1.2528, Accuracy: 5458/10000 (54%)
