@@ -72,7 +72,7 @@ model = Net()
 if cuda:
     model.cuda()
     
-optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.8)
+optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.2)
 
 print(model)
 
